@@ -1,11 +1,12 @@
- # MOOC 课程资料站
+ # 优课资料站
  
  > OPC-AI 培训营 · 模块三实验课作业
  > 用规范化 AI 开发流程完成个人网站
  
  ## 项目说明
  
- 聚合主流 MOOC 平台（中国大学 MOOC、Coursera、edX 等）最新课程资料，面向大学生提供按领域分类的课程索引。
+ 专注于 **优课联盟 (UOOC)** 平台的课程备考资料索引。
+ 开卷考试前一站式获取课件，减少信息搜集成本。
  
  ## 所用模板
  
@@ -15,16 +16,29 @@
  
  ## 主要修改内容
  
- - 站点定位从个人简历改为 MOOC 课程资料聚合
- - Skills 区改为课程分类（8 个领域）
- - Projects 区改为课程资料条目卡片
- - 隐藏 Experience、Education、Certifications 等无关区块
- - 添加自定义 CSS 优化中文排版和课程卡片样式
- - 规范中文混排字体栈
+ - 站点定位从个人简历改为优课联盟资料索引
+ - Skills 区改为课程分类
+ - Projects 区改为课程资料条目卡片（含文件列表、下载链接）
+ - 隐藏 Experience、Education 等无关区块
+ - 添加自定义 CSS 优化中文排版和资料卡片样式
+ - 支持 materials 字段展示可下载文件
  
  ## GitHub Pages 正式链接
  
  **[https://mengqiniu5-alt.github.io/mooc-course-hub/](https://mengqiniu5-alt.github.io/mooc-course-hub/)**
+ 
+ ## 资料目录结构
+ 
+ ```
+ assets/course-materials/
+ ├── 军事理论/
+ │   └── 军事理论.pdf
+ ├── 大学生心理健康/
+ │   └── ...（待上传）
+ ├── 中国传统文化/
+ ├── 创新创业基础/
+ └── 高等数学（上）/
+ ```
  
  ## 本地预览
  
@@ -35,8 +49,6 @@
  bundle exec jekyll serve
  ```
  
- 浏览器打开 http://127.0.0.1:4000
- 
  ## 隐私说明
  
  本仓库不包含密码、API Key、Token、.env 文件、课程邀请码、个人敏感信息。
@@ -44,24 +56,20 @@
  ## 项目结构
  
  ```
- 个人网站项目/
- ├─ _config.yml          # Jekyll 配置
- ├─ index.md             # 首页
+ 优课资料站/
+ ├─ _config.yml
+ ├─ index.md
  ├─ _data/
- │  ├─ skills.yml        # 课程分类
- │  └─ projects.yml      # 课程资料列表
+ │  ├─ skills.yml
+ │  └─ projects.yml
  ├─ assets/
- │  ├─ css/main.scss     # 自定义样式
- │  └─ images/           # 图片资源
- ├─ Gemfile              # 构建依赖
+ │  ├─ css/main.scss
+ │  ├─ images/
+ │  └─ course-materials/
+ ├─ Gemfile
  ├─ README.md
  ├─ docs/
- │  ├─ prd.md
- │  ├─ design.md
- │  └─ checklist.md
- ├─ report/
- │  └─ final-report.md
- └─ screenshots/
+ └─ report/
  ```
  
  ## 许可证

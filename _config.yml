@@ -1,14 +1,14 @@
  # =========================================
  # Modern Resume Theme - Jekyll 配置
  # 模板: sproogen/modern-resume-theme
- # 用途: MOOC 课程资料聚合网站
+ # 用途: 优课联盟 (UOOC) 备考资料索引
  # =========================================
  
  remote_theme: sproogen/modern-resume-theme
  
- title: MOOC 课程资料站
- name: MOOC 课程资料站
- description: 聚合主流 MOOC 平台最新课程资料，服务大学生自主学习
+ title: 优课资料站
+ name: 优课资料站
+ description: 优课联盟 (UOOC) 课程备考资料索引 · 减少信息搜集成本
  author: G03 Student
  
  url: "https://mengqiniu5-alt.github.io"
