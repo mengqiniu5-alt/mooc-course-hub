@@ -1,60 +1,65 @@
- <!-- ============================================
-     自定义 Projects 区块覆盖
-     点击课程名 = 下载资料；无资料 = 显示"待上传"
-     ============================================ -->
+ {% if site.data.projects %}
+ <section class="section projects-section">
+   <h2 class="section-title"><i class="fa fa-archive"></i>课程资料</h2>
+   <div class="intro">
+     <p>点击课程名即可下载资料；无资料的课程显示"待上传"。</p>
+   </div>
  
- <div class="container-fluid projects-section">
-   <div class="container">
-     <h2 class="section-title">课程资料</h2>
- 
-     {% for project in site.data.projects %}
-     <div class="project-card">
-       <div class="project-card-header">
-         {% if project.materials and project.materials.size > 0 %}
-           {% assign first = project.materials | first %}
-           {% assign file_url = site.baseurl | append: '/' | append: first.path %}
-           <a href="{{ file_url }}" class="project-title-link" download>
-             {{ project.name }}
-             <span class="download-icon">⬇</span>
-           </a>
-         {% else %}
-           <span class="project-title-text">{{ project.name }}</span>
-           <span class="badge-pending">待上传</span>
-         {% endif %}
-       </div>
- 
-       <div class="project-description">
-         {{ project.description | markdownify }}
-       </div>
- 
-       <div class="project-meta">
-         <span class="meta-category">{{ project.category }}</span>
-         <span class="meta-updated">更新: {{ project.updated }}</span>
-         {% if project.status == "已更新" %}
-           <span class="status-badge updated">已更新</span>
-         {% else %}
-           <span class="status-badge pending">待更新</span>
-         {% endif %}
-       </div>
- 
+   {% for project in site.data.projects %}
+   <div class="item">
+     <div class="project-title">
        {% if project.materials and project.materials.size > 0 %}
-       <div class="materials-list">
-         {% for file in project.materials %}
-           {% assign file_url = site.baseurl | append: '/' | append: file.path %}
-           <div class="material-item">
-             <a href="{{ file_url }}" download>
-               <span class="material-icon">
-                 {% if file.type == "pdf" %}📄{% elsif file.type == "zip" %}📦{% else %}📁{% endif %}
-               </span>
-               {{ file.name }}
-               <span class="material-size">({{ file.size }})</span>
-             </a>
-           </div>
-         {% endfor %}
-       </div>
+         {% assign first = project.materials | first %}
+         {% if site.baseurl %}
+           {% assign file_url = site.baseurl | append: '/' | append: first.path %}
+         {% else %}
+           {% assign file_url = '/' | append: first.path %}
+         {% endif %}
+         <a href="{{ file_url }}" download>
+           <i class="fa fa-download"></i> {{ project.name }}
+         </a>
+       {% else %}
+         {{ project.name }}
+         <span class="badge-pending">待上传</span>
        {% endif %}
      </div>
-     {% endfor %}
  
+     <div class="project-description">
+       <div class="project-tags">
+         <span class="project-tag">{{ project.category }}</span>
+         {% if project.updated %}
+           <span class="project-tag">更新: {{ project.updated }}</span>
+         {% endif %}
+         {% if project.status == "已更新" %}
+           <span class="project-tag status-updated">已更新</span>
+         {% else %}
+           <span class="project-tag status-pending">待更新</span>
+         {% endif %}
+       </div>
+       {{ project.description | markdownify }}
+     </div>
+ 
+     {% if project.materials and project.materials.size > 0 %}
+     <div class="project-materials">
+       <strong>资料文件：</strong>
+       <ul>
+       {% for file in project.materials %}
+         {% if site.baseurl %}
+           {% assign file_url = site.baseurl | append: '/' | append: file.path %}
+         {% else %}
+           {% assign file_url = '/' | append: file.path %}
+         {% endif %}
+         <li>
+           <a href="{{ file_url }}" download>
+             <i class="fa fa-file-{{ file.type }}-o"></i> {{ file.name }}
+             {% if file.size %}<span class="text-muted">({{ file.size }})</span>{% endif %}
+           </a>
+         </li>
+       {% endfor %}
+       </ul>
+     </div>
+     {% endif %}
    </div>
- </div>
+   {% endfor %}
+ </section>
+ {% endif %}

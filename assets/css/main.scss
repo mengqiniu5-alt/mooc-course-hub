@@ -16,44 +16,11 @@
  .header-name { font-size: 2.2rem; font-weight: 700; }
  .header-description { font-size: 1.1rem; color: #555; }
  
- /* ===== 课程卡片 ===== */
- .project-card {
-   border-left: 4px solid #4a90d9;
-   padding: 1.2rem 1.5rem;
-   margin-bottom: 1rem;
-   background: #fafafa;
-   border-radius: 4px;
-   transition: background 0.2s ease;
- }
- .project-card:hover { background: #f0f4ff; }
- 
- /* 课程名 - 有资料可点击下载 */
- .project-title-link {
-   font-size: 1.15rem;
-   font-weight: 700;
-   color: #2c5f8a;
-   text-decoration: none;
-   display: inline-flex;
-   align-items: center;
-   gap: 0.4rem;
- }
- .project-title-link:hover {
-   color: #1a3d5c;
-   text-decoration: underline;
- }
- .download-icon { font-size: 1rem; }
- 
- /* 课程名 - 无资料 */
- .project-title-text {
-   font-size: 1.15rem;
-   font-weight: 700;
-   color: #666;
- }
- 
+ /* "待上传" 标签 */
  .badge-pending {
    display: inline-block;
-   margin-left: 0.6rem;
-   padding: 0.1rem 0.6rem;
+   margin-left: 0.5rem;
+   padding: 0.05rem 0.5rem;
    background: #ffe0b0;
    color: #b55a00;
    border-radius: 10px;
@@ -62,63 +29,51 @@
    vertical-align: middle;
  }
  
- /* 课程描述 */
- .project-description {
-   font-size: 0.9rem;
-   color: #444;
-   margin: 0.4rem 0;
+ /* 状态标签 */
+ .status-updated {
+   background: #dff0d8 !important;
+   color: #3c763d !important;
  }
- .project-description p { margin: 0.2rem 0; }
- 
- /* 元信息 */
- .project-meta {
-   font-size: 0.8rem;
-   color: #888;
-   display: flex;
-   gap: 1rem;
-   flex-wrap: wrap;
-   margin-bottom: 0.4rem;
+ .status-pending {
+   background: #fcf8e3 !important;
+   color: #8a6d3b !important;
  }
  
- .status-badge {
-   display: inline-block;
-   padding: 0.1rem 0.5rem;
-   border-radius: 10px;
-   font-size: 0.75rem;
-   font-weight: 500;
- }
- .status-badge.updated { background: #e8f5e9; color: #2e7d32; }
- .status-badge.pending { background: #fff3e0; color: #e65100; }
- 
- /* ===== 资料列表 ===== */
- .materials-list {
+ /* 资料文件列表 */
+ .project-materials {
    margin-top: 0.6rem;
-   padding: 0.5rem 0.7rem;
+   padding: 0.5rem 0.8rem;
    background: #f5f7fa;
    border-radius: 4px;
+   font-size: 0.85rem;
  }
- .material-item {
-   padding: 0.2rem 0;
+ .project-materials ul {
+   margin: 0.3rem 0 0 0;
+   padding-left: 1.2rem;
  }
- .material-item a {
-   color: #4a90d9;
-   text-decoration: none;
-   display: inline-flex;
-   align-items: center;
-   gap: 0.3rem;
-   font-size: 0.9rem;
+ .project-materials li {
+   margin: 0.2rem 0;
  }
- .material-item a:hover {
-   text-decoration: underline;
-   color: #2c5f8a;
+ .project-materials a {
+   color: #428bca;
  }
- .material-icon { font-size: 1rem; }
- .material-size {
+ .project-materials a:hover {
+   color: #2a6496;
+ }
+ .text-muted {
    color: #999;
-   font-size: 0.75rem;
+   font-size: 0.8rem;
+ }
+ 
+ /* 课程名下载链接 */
+ .project-title a {
+   color: #337ab7;
+ }
+ .project-title a:hover {
+   color: #23527c;
+   text-decoration: underline;
  }
  
  @media (max-width: 768px) {
    .header-name { font-size: 1.6rem; }
-   .project-meta { flex-direction: column; gap: 0.3rem; }
  }
