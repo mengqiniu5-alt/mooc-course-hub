@@ -2,56 +2,48 @@
  
  ## 1. 页面区块与浏览顺序
  
- 单页式设计，从上到下：
+ 单页式设计，从上到下排列：
  
- 1. **Hero** — "优课资料站"，一句话定位
- 2. **About** — 站点定位、使命（减少信息搜集成本）
- 3. **Skills** — 课程分类
- 4. **Projects** — 课程资料卡片（含文件列表）
+ 1. **Hero** — 姓名、学校专业、一句话定位
+ 2. **About** — 个人简介
+ 3. **Skills** — 真实能力列表
+ 4. **Projects** — 项目经历卡片
  5. **Contact** — GitHub 链接
  
- ---
- 
- ## 2. 视觉风格
+ ## 2. 颜色、字体与整体风格
  
  | 维度 | 方案 |
  |------|------|
- | 风格 | 简洁、信息导向 |
- | 主色调 | Modern Resume Theme 默认蓝色 (#4a90d9) |
- | 字体 | 系统默认 + Noto Sans SC / PingFang SC |
+ | 风格 | 简洁专业，偏商务/学术 |
+ | 字体 | 系统无衬线 + Noto Sans SC / PingFang SC 中文优化 |
  
- ---
+ ## 3. 响应式要求
  
- ## 3. 响应式
- 
- - 桌面 (≥1024px)：网格分类 + 卡片列表
- - 移动 (<768px)：单栏堆叠，导航折叠
- 
- ---
+ - 桌面端（≥1024px）：多栏布局，内容居中
+ - 移动端（<768px）：单栏堆叠，无横向滚动
  
  ## 4. 关键文件
  
  | 文件 | 职责 |
  |------|------|
  | `_config.yml` | Jekyll 配置 |
- | `index.md` | 首页 |
- | `_data/skills.yml` | 课程分类数据 |
- | `_data/projects.yml` | 课程资料数据 |
- | `assets/css/main.scss` | 自定义样式 |
- | `assets/course-materials/` | 课件文件存储 |
+ | `index.md` | 首页内容 |
+ | `_data/skills.yml` | 个人能力数据 |
+ | `_data/projects.yml` | 项目经历数据 |
+ | `assets/css/main.scss` | 中文排版优化 |
+ | `docs/` | PRD/Design/Checklist |
+ | `report/final-report.md` | 最终报告 |
+ | `screenshots/` | 截图证据 |
  
- ---
+ ## 5. 保留与修改
  
- ## 5. 资料存储方案
+ **保留**：布局框架、导航、响应式策略、Pages 配置
+ **修改**：站点名称、Hero 内容、Skills（个人能力）、Projects（真实项目）
  
- ```
- assets/course-materials/课程名/资料文件.pdf
- ```
+ ## 6. 素材来源
  
- 资料由用户提供 → 我上传到对应目录 → 更新 projects.yml 中的 materials 字段 → 提交推送。
- 主题已配置为排除 docs/、report/、screenshots/ 目录，资料目录在构建范围内，可通过 Pages 直接访问。
+ - 图标：Font Awesome（模板内置）
+ - 头像：待添加
+ - 字体：Google Fonts 开源字体
  
- ---
- 
- *版本：v1.0 | 最后更新：2026-07-24*
- *主要变更：聚焦优课联盟、增加资料存储方案、移除多平台聚合定位*
+ *版本：v0.3 | 最后更新：2026-07-24*

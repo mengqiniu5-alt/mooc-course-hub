@@ -1,15 +1,9 @@
- # =========================================
- # Modern Resume Theme - Jekyll 配置
- # 模板: sproogen/modern-resume-theme
- # 用途: 优课联盟 (UOOC) 备考资料索引
- # =========================================
- 
  remote_theme: sproogen/modern-resume-theme
  
- title: 优课资料站
- name: 优课资料站
- description: 优课联盟 (UOOC) 课程备考资料索引 · 减少信息搜集成本
- author: G03 Student
+ title: 牛萌琪
+ name: 牛萌琪
+ description: 深圳大学信息管理专业 · 合作谈判 · 产品方向
+ author: 牛萌琪
  
  url: "https://mengqiniu5-alt.github.io"
  baseurl: "/mooc-course-hub"

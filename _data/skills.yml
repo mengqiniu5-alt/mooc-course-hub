@@ -1,36 +1,23 @@
- # =========================================
- # 课程分类 (Skills section)
- # 按领域分类展示 MOOC 课程方向
- # =========================================
- 
- - name: 计算机与编程
+ - name: 合作谈判
    level: featured
-   description: Python、Java、C/C++、数据结构与算法
+   description: 擅长跨部门协调、项目谈判与利益平衡，推动多方达成共识
  
- - name: 人工智能与数据科学
+ - name: 产品思维
    level: featured
-   description: 机器学习、深度学习、数据分析、大模型
+   description: 关注用户需求与场景，能够从产品角度分析问题并设计解决方案
  
- - name: 金融科技
+ - name: 需求分析与文档
    level: featured
-   description: 区块链、量化金融、风险管理、数字支付
+   description: 能够独立完成立项分析报告、产品需求文档、变更管理与核验报告
  
- - name: 数学与统计
+ - name: AI 工具应用
    level: intermediate
-   description: 高等数学、线性代数、概率论、统计学
+   description: 熟练使用 AI Agent 辅助完成项目开发、材料纠错和规范化交付
  
- - name: 语言与文化
+ - name: 数据分析与可视化
    level: intermediate
-   description: 英语、日语、跨文化沟通、学术写作
+   description: 具备基础数据分析能力，能够从数据中发现问题并支撑决策
  
- - name: 商业与管理
+ - name: 团队协作
    level: intermediate
-   description: 产品管理、市场营销、创业创新、项目管理
- 
- - name: 工程与技术
-   level: beginner
-   description: 电子电路、物联网、嵌入式系统、通信原理
- 
- - name: 人文社科
-   level: beginner
-   description: 哲学、心理学、经济学、法学概论
+   description: 良好的协作意识，能够在团队中承担协调与推进角色

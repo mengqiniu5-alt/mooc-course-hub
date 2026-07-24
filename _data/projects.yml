@@ -1,51 +1,28 @@
- # =========================================
- # 课程资料列表 (Projects section)
- # 优课联盟 (UOOC) 备考资料
- # 资料文件存放在 assets/course-materials/课程名/
- # =========================================
- 
- - name: "军事理论"
+ - name: "明川银行 AI 反欺诈预警系统 — 立项分析"
+   link: https://github.com/mengqiniu5-alt/mooc-course-hub
    description: |
-     信息化战争的发展趋势：无人平台、太空战场、电磁战场、网络战场
-     机器人部队、网军、天军等新型作战力量
-     含完整课件 PDF（36页）
-   updated: 2026-07
-   category: 人文社科
-   status: 已更新
-   materials:
-     - name: 军事理论_课件.pdf
-       path: assets/course-materials/军事理论/军事理论.pdf
-       type: pdf
-       size: 2.1 MB
+     完成明川银行 AI 反欺诈预警系统的完整立项分析报告与管理层汇报。
+     覆盖业务痛点分析、预算（650万元/9个月）、供应商方案评估、变更管理。
+     核心成果：立项分析报告 V2 + 管理层汇报 PPT + 变更影响与修改记录 + 核验与反思。
+   status: 已完成
+   role: 项目主笔
+   tools: Word, Excel, PPT, AI Agent
  
- - name: "大学生心理健康"
+ - name: "明川银行 AI 反欺诈预警系统 — 材料纠错与修复"
+   link: https://github.com/mengqiniu5-alt/mooc-course-hub
    description: |
-     涵盖自我认知、情绪管理、人际交往、压力应对等主题
-     资料待上传
-   updated: 2026-07
-   category: 人文社科
-   status: 待更新
+     针对立项材料的 29 项问题进行全面故障诊断与修复方案编制。
+     按优先级分五波推进：事实/金额/单位错误 → 供应商主张误用 → 项目范围定位 → 
+     风险治理补充 → 过度结论修正。最终产出修复版立项分析报告与管理层汇报。
+   status: 已完成
+   role: 修复方案主笔
+   tools: Word, PPT, AI Agent, 问题台账
  
- - name: "中国传统文化"
+ - name: "个人网站 — 规范化 AI 开发流程实践"
+   link: https://mengqiniu5-alt.github.io/mooc-course-hub/
    description: |
-     儒家思想、道家思想、古典文学、传统艺术等模块
-     资料待上传
-   updated: 2026-07
-   category: 人文社科
-   status: 待更新
- 
- - name: "创新创业基础"
-   description: |
-     商业模式、创业计划、市场分析、案例研讨
-     资料待上传
-   updated: 2026-07
-   category: 商业与管理
-   status: 待更新
- 
- - name: "高等数学（上）"
-   description: |
-     函数与极限、导数与微分、不定积分与定积分
-     资料待上传
-   updated: 2026-07
-   category: 数学与统计
-   status: 待更新
+     本网站。使用 Modern Resume Theme，通过 Vibe → Spec → Harness → GitHub → Pages → TA-Claw 
+     的规范化 AI 开发流程完成。包含 PRD、Design、Checklist 全套文档。
+   status: 进行中
+   role: 独立完成
+   tools: Jekyll, GitHub Pages, Codex AI Agent, Git
