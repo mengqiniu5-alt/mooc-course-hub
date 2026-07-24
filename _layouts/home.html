@@ -1,0 +1,88 @@
+ ---
+ layout: default
+ ---
+ 
+ {% include header.html %}
+ 
+ {% if site.data.education.size > 0 and site.show_education %}
+   {% include education.html %}
+ {% endif %}
+ 
+ {% if site.data.experience.size > 0 and site.show_experience %}
+   {% include experience.html %}
+ {% endif %}
+ 
+ <!-- ===== 自定义课程资料区块 ===== -->
+ {% if site.data.projects.size > 0 and site.show_projects %}
+ <section class="section projects-section">
+   <h2 class="section-title"><i class="fa fa-archive"></i>课程资料</h2>
+   <div class="intro">
+     <p>点击课程名即可下载资料；无资料课程显示"待上传"。</p>
+   </div>
+ 
+   {% for project in site.data.projects %}
+   <div class="item">
+     <div class="project-title">
+       {% if project.materials and project.materials.size > 0 %}
+         {% assign first_file = project.materials | first %}
+         {% if site.baseurl and site.baseurl != "" %}
+           {% assign file_url = first_file.path | prepend: site.baseurl | prepend: "/" %}
+         {% else %}
+           {% assign file_url = first_file.path | prepend: "/" %}
+         {% endif %}
+         <a href="{{ file_url }}" download>
+           <i class="fa fa-download"></i> {{ project.name }}
+         </a>
+       {% else %}
+         <span>{{ project.name }}</span>
+         <span class="badge-pending">待上传</span>
+       {% endif %}
+     </div>
+ 
+     <div class="project-description">
+       <div class="project-tags">
+         <span class="project-tag">{{ project.category }}</span>
+         {% if project.updated %}
+           <span class="project-tag">更新: {{ project.updated }}</span>
+         {% endif %}
+         {% if project.status == "已更新" %}
+           <span class="project-tag status-updated">已更新</span>
+         {% else %}
+           <span class="project-tag status-pending">待更新</span>
+         {% endif %}
+       </div>
+       {{ project.description | markdownify }}
+     </div>
+ 
+     {% if project.materials and project.materials.size > 0 %}
+     <div class="project-materials">
+       <strong>资料文件：</strong>
+       <ul>
+       {% for file in project.materials %}
+         {% if site.baseurl and site.baseurl != "" %}
+           {% assign file_url = file.path | prepend: site.baseurl | prepend: "/" %}
+         {% else %}
+           {% assign file_url = file.path | prepend: "/" %}
+         {% endif %}
+         <li>
+           <a href="{{ file_url }}" download>
+             <i class="fa fa-file-{{ file.type }}-o"></i> {{ file.name }}
+             {% if file.size %}<span class="text-muted">({{ file.size }})</span>{% endif %}
+           </a>
+         </li>
+       {% endfor %}
+       </ul>
+     </div>
+     {% endif %}
+   </div>
+   {% endfor %}
+ </section>
+ {% endif %}
+ 
+ {% if site.data.skills.size > 0 and site.show_skills %}
+   {% include skills.html %}
+ {% endif %}
+ 
+ {% if site.data.certifications.size > 0 and site.show_certifications %}
+   {% include certifications.html %}
+ {% endif %}
