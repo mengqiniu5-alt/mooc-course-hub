@@ -1,0 +1,60 @@
+ <!-- ============================================
+     自定义 Projects 区块覆盖
+     点击课程名 = 下载资料；无资料 = 显示"待上传"
+     ============================================ -->
+ 
+ <div class="container-fluid projects-section">
+   <div class="container">
+     <h2 class="section-title">课程资料</h2>
+ 
+     {% for project in site.data.projects %}
+     <div class="project-card">
+       <div class="project-card-header">
+         {% if project.materials and project.materials.size > 0 %}
+           {% assign first = project.materials | first %}
+           {% assign file_url = site.baseurl | append: '/' | append: first.path %}
+           <a href="{{ file_url }}" class="project-title-link" download>
+             {{ project.name }}
+             <span class="download-icon">⬇</span>
+           </a>
+         {% else %}
+           <span class="project-title-text">{{ project.name }}</span>
+           <span class="badge-pending">待上传</span>
+         {% endif %}
+       </div>
+ 
+       <div class="project-description">
+         {{ project.description | markdownify }}
+       </div>
+ 
+       <div class="project-meta">
+         <span class="meta-category">{{ project.category }}</span>
+         <span class="meta-updated">更新: {{ project.updated }}</span>
+         {% if project.status == "已更新" %}
+           <span class="status-badge updated">已更新</span>
+         {% else %}
+           <span class="status-badge pending">待更新</span>
+         {% endif %}
+       </div>
+ 
+       {% if project.materials and project.materials.size > 0 %}
+       <div class="materials-list">
+         {% for file in project.materials %}
+           {% assign file_url = site.baseurl | append: '/' | append: file.path %}
+           <div class="material-item">
+             <a href="{{ file_url }}" download>
+               <span class="material-icon">
+                 {% if file.type == "pdf" %}📄{% elsif file.type == "zip" %}📦{% else %}📁{% endif %}
+               </span>
+               {{ file.name }}
+               <span class="material-size">({{ file.size }})</span>
+             </a>
+           </div>
+         {% endfor %}
+       </div>
+       {% endif %}
+     </div>
+     {% endfor %}
+ 
+   </div>
+ </div>

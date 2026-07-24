@@ -5,12 +5,10 @@
  # =========================================
  
  - name: "军事理论"
-   link: https://www.uooc.net.cn/league/union
    description: |
      信息化战争的发展趋势：无人平台、太空战场、电磁战场、网络战场
      机器人部队、网军、天军等新型作战力量
      含完整课件 PDF（36页）
-   platform: 优课联盟 (UOOC)
    updated: 2026-07
    category: 人文社科
    status: 已更新
@@ -21,41 +19,33 @@
        size: 2.1 MB
  
  - name: "大学生心理健康"
-   link: https://www.uooc.net.cn/league/union
    description: |
      涵盖自我认知、情绪管理、人际交往、压力应对等主题
      资料待上传
-   platform: 优课联盟 (UOOC)
    updated: 2026-07
    category: 人文社科
    status: 待更新
  
  - name: "中国传统文化"
-   link: https://www.uooc.net.cn/league/union
    description: |
      儒家思想、道家思想、古典文学、传统艺术等模块
      资料待上传
-   platform: 优课联盟 (UOOC)
    updated: 2026-07
    category: 人文社科
    status: 待更新
  
  - name: "创新创业基础"
-   link: https://www.uooc.net.cn/league/union
    description: |
      商业模式、创业计划、市场分析、案例研讨
      资料待上传
-   platform: 优课联盟 (UOOC)
    updated: 2026-07
    category: 商业与管理
    status: 待更新
  
  - name: "高等数学（上）"
-   link: https://www.uooc.net.cn/league/union
    description: |
      函数与极限、导数与微分、不定积分与定积分
      资料待上传
-   platform: 优课联盟 (UOOC)
    updated: 2026-07
    category: 数学与统计
    status: 待更新

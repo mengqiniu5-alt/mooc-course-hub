@@ -4,8 +4,7 @@
  @import "modern-resume-theme";
  
  /* =========================================
-    自定义样式覆盖
-    MOOC 课程资料站 - 中文优化 + 资料卡片
+    自定义样式 - 优课资料站
     ========================================= */
  
  body {
@@ -17,60 +16,109 @@
  .header-name { font-size: 2.2rem; font-weight: 700; }
  .header-description { font-size: 1.1rem; color: #555; }
  
- /* 课程分类卡片 */
- .skill-group { margin-bottom: 1.2rem; }
- .skill-group .skill-name { font-weight: 600; font-size: 1.05rem; }
- 
- /* 项目卡片（课程条目） */
+ /* ===== 课程卡片 ===== */
  .project-card {
    border-left: 4px solid #4a90d9;
-   padding: 1rem 1.2rem;
+   padding: 1.2rem 1.5rem;
    margin-bottom: 1rem;
    background: #fafafa;
    border-radius: 4px;
    transition: background 0.2s ease;
  }
  .project-card:hover { background: #f0f4ff; }
- .project-card .project-title { font-size: 1.1rem; font-weight: 600; margin: 0 0 0.3rem 0; }
- .project-card .project-description { font-size: 0.9rem; color: #444; margin: 0.3rem 0; }
- .project-card .project-meta {
-   font-size: 0.8rem; color: #888;
-   display: flex; gap: 1rem; flex-wrap: wrap;
+ 
+ /* 课程名 - 有资料可点击下载 */
+ .project-title-link {
+   font-size: 1.15rem;
+   font-weight: 700;
+   color: #2c5f8a;
+   text-decoration: none;
+   display: inline-flex;
+   align-items: center;
+   gap: 0.4rem;
  }
- .project-card .project-meta span {
-   display: inline-flex; align-items: center; gap: 0.3rem;
+ .project-title-link:hover {
+   color: #1a3d5c;
+   text-decoration: underline;
+ }
+ .download-icon { font-size: 1rem; }
+ 
+ /* 课程名 - 无资料 */
+ .project-title-text {
+   font-size: 1.15rem;
+   font-weight: 700;
+   color: #666;
  }
  
- /* 资料附件列表 */
+ .badge-pending {
+   display: inline-block;
+   margin-left: 0.6rem;
+   padding: 0.1rem 0.6rem;
+   background: #ffe0b0;
+   color: #b55a00;
+   border-radius: 10px;
+   font-size: 0.75rem;
+   font-weight: 600;
+   vertical-align: middle;
+ }
+ 
+ /* 课程描述 */
+ .project-description {
+   font-size: 0.9rem;
+   color: #444;
+   margin: 0.4rem 0;
+ }
+ .project-description p { margin: 0.2rem 0; }
+ 
+ /* 元信息 */
+ .project-meta {
+   font-size: 0.8rem;
+   color: #888;
+   display: flex;
+   gap: 1rem;
+   flex-wrap: wrap;
+   margin-bottom: 0.4rem;
+ }
+ 
+ .status-badge {
+   display: inline-block;
+   padding: 0.1rem 0.5rem;
+   border-radius: 10px;
+   font-size: 0.75rem;
+   font-weight: 500;
+ }
+ .status-badge.updated { background: #e8f5e9; color: #2e7d32; }
+ .status-badge.pending { background: #fff3e0; color: #e65100; }
+ 
+ /* ===== 资料列表 ===== */
  .materials-list {
-   margin-top: 0.5rem;
-   padding: 0.4rem 0.6rem;
+   margin-top: 0.6rem;
+   padding: 0.5rem 0.7rem;
    background: #f5f7fa;
    border-radius: 4px;
-   font-size: 0.85rem;
  }
- .materials-list a {
+ .material-item {
+   padding: 0.2rem 0;
+ }
+ .material-item a {
    color: #4a90d9;
    text-decoration: none;
    display: inline-flex;
    align-items: center;
    gap: 0.3rem;
+   font-size: 0.9rem;
  }
- .materials-list a:hover { text-decoration: underline; }
+ .material-item a:hover {
+   text-decoration: underline;
+   color: #2c5f8a;
+ }
+ .material-icon { font-size: 1rem; }
  .material-size {
    color: #999;
    font-size: 0.75rem;
-   margin-left: 0.3rem;
  }
- 
- .status-badge {
-   display: inline-block; padding: 0.15rem 0.5rem;
-   border-radius: 10px; font-size: 0.75rem; font-weight: 500;
- }
- .status-badge.updated { background: #e8f5e9; color: #2e7d32; }
- .status-badge.pending { background: #fff3e0; color: #e65100; }
  
  @media (max-width: 768px) {
    .header-name { font-size: 1.6rem; }
-   .project-card .project-meta { flex-direction: column; gap: 0.3rem; }
+   .project-meta { flex-direction: column; gap: 0.3rem; }
  }
