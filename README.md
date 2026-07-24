@@ -24,7 +24,7 @@
  
  ## GitHub Pages 正式链接
  
- > 部署后填写：`https://[你的用户名].github.io/[仓库名]/`
+ **[https://mengqiniu5-alt.github.io/mooc-course-hub/](https://mengqiniu5-alt.github.io/mooc-course-hub/)**
  
  ## 本地预览
  
