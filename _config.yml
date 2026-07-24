@@ -6,52 +6,21 @@
  
  remote_theme: sproogen/modern-resume-theme
  
- # ----- 基础信息 -----
  title: MOOC 课程资料站
  name: MOOC 课程资料站
  description: 聚合主流 MOOC 平台最新课程资料，服务大学生自主学习
- 
- # ----- 作者信息 -----
  author: G03 Student
  
- # ----- GitHub Pages 部署 -----
  url: "https://mengqiniu5-alt.github.io"
  baseurl: "/mooc-course-hub"
  
- # ----- 主题插件 -----
- plugins:
-   - jekyll-remote-theme
-   - jekyll-seo-tag
-   - jekyll-sitemap
-   - jekyll-feed
+ github_username: mengqiniu5-alt
  
- # ----- 主题特定配置 -----
  show_experience: false
  show_projects: true
  show_education: false
  show_skills: true
  show_certifications: false
  
- # ----- 社交链接 -----
- github_username: mengqiniu5-alt
- linkedin_username: false
- 
- # ----- 排除文件 -----
- exclude:
-   - README.md
-   - Gemfile
-   - Gemfile.lock
-   - docs/
-   - report/
-   - screenshots/
- 
- # ----- Jekyll 默认设置 -----
- defaults:
-   - scope:
-       path: ""
-     values:
-       layout: "default"
- 
- # ----- 语言与编码 -----
  lang: zh-CN
  encoding: utf-8
