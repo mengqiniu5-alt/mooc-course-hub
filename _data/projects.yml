@@ -1,7 +1,24 @@
  # =========================================
  # 课程资料列表 (Projects section)
  # 每个条目表示一门课程的最新资料
+ # 资料文件存放在 assets/course-materials/课程名/
  # =========================================
+ 
+ - name: "军事理论"
+   link: https://www.uooc.net.cn/league/union
+   description: |
+     信息化战争的发展趋势：无人平台、太空战场、电磁战场、网络战场
+     机器人部队、网军、天军等新型作战力量
+     优课联盟课程，包含完整的课件 PDF
+   platform: 优课联盟 (UOOC)
+   updated: 2026-07
+   category: 人文社科
+   status: 已更新
+   materials:
+     - name: 军事理论_课件.pdf
+       path: assets/course-materials/军事理论/军事理论.pdf
+       type: pdf
+       size: 2.1 MB
  
  - name: "Python 程序设计"
    link: https://www.icourse163.org/
