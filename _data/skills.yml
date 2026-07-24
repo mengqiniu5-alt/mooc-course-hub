@@ -1,0 +1,36 @@
+ # =========================================
+ # 课程分类 (Skills section)
+ # 按领域分类展示 MOOC 课程方向
+ # =========================================
+ 
+ - name: 计算机与编程
+   level: featured
+   description: Python、Java、C/C++、数据结构与算法
+ 
+ - name: 人工智能与数据科学
+   level: featured
+   description: 机器学习、深度学习、数据分析、大模型
+ 
+ - name: 金融科技
+   level: featured
+   description: 区块链、量化金融、风险管理、数字支付
+ 
+ - name: 数学与统计
+   level: intermediate
+   description: 高等数学、线性代数、概率论、统计学
+ 
+ - name: 语言与文化
+   level: intermediate
+   description: 英语、日语、跨文化沟通、学术写作
+ 
+ - name: 商业与管理
+   level: intermediate
+   description: 产品管理、市场营销、创业创新、项目管理
+ 
+ - name: 工程与技术
+   level: beginner
+   description: 电子电路、物联网、嵌入式系统、通信原理
+ 
+ - name: 人文社科
+   level: beginner
+   description: 哲学、心理学、经济学、法学概论

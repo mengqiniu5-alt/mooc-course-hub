@@ -1,0 +1,59 @@
+ # =========================================
+ # Modern Resume Theme - Jekyll 配置
+ # 模板: sproogen/modern-resume-theme
+ # 用途: MOOC 课程资料聚合网站
+ # =========================================
+ 
+ remote_theme: sproogen/modern-resume-theme
+ 
+ # ----- 基础信息 -----
+ title: MOOC 课程资料站
+ name: MOOC 课程资料站
+ description: 聚合主流 MOOC 平台最新课程资料，服务大学生自主学习
+ 
+ # ----- 作者信息 -----
+ author: [你的姓名]
+ avatar: assets/images/avatar.png
+ 
+ # ----- GitHub Pages 部署 -----
+ # 部署后取消注释并填写实际地址
+ # url: "https://[你的用户名].github.io"
+ # baseurl: "/[仓库名]"
+ 
+ # ----- 主题插件 -----
+ plugins:
+   - jekyll-remote-theme
+   - jekyll-seo-tag
+   - jekyll-sitemap
+   - jekyll-feed
+ 
+ # ----- 主题特定配置 -----
+ show_experience: false        # 不展示工作经历
+ show_projects: true           # 展示项目（课程资料）
+ show_education: false         # 不展示教育经历
+ show_skills: true             # 展示课程分类
+ show_certifications: false    # 不展示证书
+ 
+ # ----- 社交链接 -----
+ github_username: [你的GitHub用户名]
+ linkedin_username: false
+ 
+ # ----- 排除文件 -----
+ exclude:
+   - README.md
+   - Gemfile
+   - Gemfile.lock
+   - docs/
+   - report/
+   - screenshots/
+ 
+ # ----- Jekyll 默认设置 -----
+ defaults:
+   - scope:
+       path: ""
+     values:
+       layout: "default"
+ 
+ # ----- 语言与编码 -----
+ lang: zh-CN
+ encoding: utf-8
