@@ -1,0 +1,232 @@
+ <!DOCTYPE html>
+ <html lang="zh-CN">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>牛萌琪 · 个人主页</title>
+ <meta name="description" content="深圳大学信息管理专业 · 合作谈判 · 产品方向">
+ <style>
+   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+   html { scroll-behavior: smooth; }
+   body {
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+     line-height: 1.7; color: #333; background: #fff;
+   }
+   a { color: #2563eb; text-decoration: none; }
+   a:hover { text-decoration: underline; }
+   .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+ 
+   /* Nav */
+   nav {
+     position: sticky; top: 0; background: #fff; z-index: 100;
+     border-bottom: 1px solid #e5e7eb; padding: 12px 0;
+   }
+   nav .container { display: flex; justify-content: space-between; align-items: center; }
+   nav .logo { font-weight: 700; font-size: 1.1rem; color: #111; }
+   nav ul { list-style: none; display: flex; gap: 24px; }
+   nav ul li a { color: #555; font-size: 0.9rem; }
+   nav ul li a:hover { color: #2563eb; }
+ 
+   /* Hero */
+   .hero {
+     padding: 80px 0 60px; text-align: center; background: linear-gradient(180deg, #f8faff 0%, #fff 100%);
+   }
+   .hero h1 { font-size: 2.5rem; font-weight: 700; color: #111; margin-bottom: 12px; }
+   .hero .subtitle { font-size: 1.2rem; color: #555; margin-bottom: 8px; }
+   .hero .tagline { font-size: 1rem; color: #888; margin-bottom: 28px; }
+   .hero .btn {
+     display: inline-block; padding: 10px 28px; background: #2563eb; color: #fff;
+     border-radius: 6px; font-size: 0.95rem; transition: background 0.2s;
+   }
+   .hero .btn:hover { background: #1d4ed8; text-decoration: none; }
+ 
+   /* Section */
+   section { padding: 60px 0; }
+   section:nth-child(even) { background: #f9fafb; }
+   section h2 {
+     font-size: 1.6rem; font-weight: 700; color: #111; margin-bottom: 32px;
+     text-align: center; position: relative;
+   }
+   section h2::after {
+     content: ''; display: block; width: 48px; height: 3px; background: #2563eb;
+     margin: 10px auto 0; border-radius: 2px;
+   }
+ 
+   /* About */
+   .about-content { max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.05rem; color: #444; }
+ 
+   /* Skills */
+   .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+   .skill-card {
+     background: #fff; border: 1px solid #e5e7eb; border-radius: 8px;
+     padding: 20px; transition: box-shadow 0.2s;
+   }
+   .skill-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+   .skill-card h3 { font-size: 1.1rem; font-weight: 600; color: #111; margin-bottom: 6px; }
+   .skill-card .badge {
+     display: inline-block; font-size: 0.75rem; padding: 2px 8px; border-radius: 10px;
+     margin-bottom: 8px; font-weight: 500;
+   }
+   .badge-featured { background: #dbeafe; color: #1d4ed8; }
+   .badge-intermediate { background: #e0e7ff; color: #4338ca; }
+   .skill-card p { font-size: 0.9rem; color: #666; }
+ 
+   /* Projects */
+   .project-list { display: flex; flex-direction: column; gap: 20px; }
+   .project-card {
+     background: #fff; border: 1px solid #e5e7eb; border-radius: 8px;
+     padding: 24px; border-left: 4px solid #2563eb; transition: box-shadow 0.2s;
+   }
+   .project-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+   .project-card h3 { font-size: 1.1rem; font-weight: 600; color: #111; margin-bottom: 10px; }
+   .project-card p { font-size: 0.9rem; color: #555; margin-bottom: 10px; line-height: 1.6; }
+   .project-meta { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.8rem; color: #888; }
+   .project-meta span { display: inline-flex; align-items: center; gap: 4px; }
+   .status-done { color: #16a34a; }
+   .status-wip { color: #ca8a04; }
+ 
+   /* Contact */
+   .contact-content { text-align: center; }
+   .contact-content p { font-size: 1rem; color: #555; margin-bottom: 16px; }
+   .contact-content .btn { display: inline-block; padding: 10px 28px; background: #111; color: #fff; border-radius: 6px; font-size: 0.95rem; }
+   .contact-content .btn:hover { background: #333; text-decoration: none; }
+ 
+   /* Footer */
+   footer { text-align: center; padding: 32px 0; font-size: 0.85rem; color: #999; border-top: 1px solid #e5e7eb; }
+ 
+   /* Mobile */
+   @media (max-width: 640px) {
+     nav ul { gap: 12px; }
+     nav ul li a { font-size: 0.8rem; }
+     .hero { padding: 56px 0 40px; }
+     .hero h1 { font-size: 1.8rem; }
+     .hero .subtitle { font-size: 1rem; }
+     .skills-grid { grid-template-columns: 1fr; }
+     .project-meta { flex-direction: column; gap: 4px; }
+   }
+ </style>
+ </head>
+ <body>
+ 
+ <nav>
+   <div class="container">
+     <span class="logo">牛萌琪</span>
+     <ul>
+       <li><a href="#about">关于</a></li>
+       <li><a href="#skills">能力</a></li>
+       <li><a href="#projects">项目</a></li>
+       <li><a href="#contact">联系</a></li>
+     </ul>
+   </div>
+ </nav>
+ 
+ <section class="hero" id="home">
+   <div class="container">
+     <h1>牛萌琪</h1>
+     <p class="subtitle">深圳大学 · 信息管理专业</p>
+     <p class="tagline">合作谈判 · 产品方向 · AI 工具应用</p>
+     <a href="#projects" class="btn">查看我的项目</a>
+   </div>
+ </section>
+ 
+ <section id="about">
+   <div class="container">
+     <h2>关于我</h2>
+     <div class="about-content">
+       <p>我是<strong>牛萌琪</strong>，深圳大学信息管理专业在读。我擅长合作谈判与跨团队沟通，对<strong>产品方向</strong>充满兴趣，正在探索如何将信息管理的方法论与产品思维结合，创造出真正解决问题的方案。</p>
+       <p style="margin-top:16px">在校园和项目实践中，我积累了从需求分析、方案设计到成果交付的完整经验。我相信好的产品不仅需要逻辑和结构，更需要理解人的需求和场景。</p>
+     </div>
+   </div>
+ </section>
+ 
+ <section id="skills">
+   <div class="container">
+     <h2>能力</h2>
+     <div class="skills-grid">
+       <div class="skill-card">
+         <h3>合作谈判</h3>
+         <span class="badge badge-featured">核心</span>
+         <p>擅长跨部门协调、项目谈判与利益平衡，推动多方达成共识</p>
+       </div>
+       <div class="skill-card">
+         <h3>产品思维</h3>
+         <span class="badge badge-featured">核心</span>
+         <p>关注用户需求与场景，能够从产品角度分析问题并设计解决方案</p>
+       </div>
+       <div class="skill-card">
+         <h3>需求分析与文档</h3>
+         <span class="badge badge-featured">核心</span>
+         <p>独立完成立项分析报告、产品需求文档、变更管理与核验报告</p>
+       </div>
+       <div class="skill-card">
+         <h3>AI 工具应用</h3>
+         <span class="badge badge-intermediate">进阶</span>
+         <p>熟练使用 AI Agent 辅助完成项目开发、材料纠错和规范化交付</p>
+       </div>
+       <div class="skill-card">
+         <h3>数据分析</h3>
+         <span class="badge badge-intermediate">进阶</span>
+         <p>具备基础数据分析能力，能够从数据中发现问题并支撑决策</p>
+       </div>
+       <div class="skill-card">
+         <h3>团队协作</h3>
+         <span class="badge badge-intermediate">进阶</span>
+         <p>良好的协作意识，能在团队中承担协调与推进角色</p>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <section id="projects">
+   <div class="container">
+     <h2>项目</h2>
+     <div class="project-list">
+       <div class="project-card">
+         <h3>明川银行 AI 反欺诈预警系统 — 立项分析</h3>
+         <p>完成明川银行 AI 反欺诈预警系统的完整立项分析报告与管理层汇报。覆盖业务痛点分析、预算评估（650万元/9个月）、供应商方案评估与变更管理。核心产出包括立项分析报告 V2、管理层汇报 PPT、变更影响与修改记录、核验与反思。</p>
+         <div class="project-meta">
+           <span>📋 角色：项目主笔</span>
+           <span>🛠 工具：Word, Excel, PPT, AI Agent</span>
+           <span class="status-done">✅ 已完成</span>
+         </div>
+       </div>
+       <div class="project-card">
+         <h3>明川银行 AI 反欺诈预警系统 — 材料纠错与修复</h3>
+         <p>针对立项材料的 29 项问题进行全面故障诊断与修复方案编制。按优先级分五波推进：事实/金额/单位错误 → 供应商主张误用 → 项目范围定位 → 风险治理补充 → 过度结论修正。最终产出修复版立项分析报告与管理层汇报。</p>
+         <div class="project-meta">
+           <span>📋 角色：修复方案主笔</span>
+           <span>🛠 工具：Word, PPT, AI Agent, 问题台账</span>
+           <span class="status-done">✅ 已完成</span>
+         </div>
+       </div>
+       <div class="project-card">
+         <h3>个人网站 — 规范化 AI 开发流程实践</h3>
+         <p>本网站。通过 Vibe → Spec → Harness → GitHub → Pages → TA-Claw 的规范化 AI 开发流程完成。包含 PRD、Design、Checklist 全套文档，使用纯静态 HTML/CSS 部署于 GitHub Pages。</p>
+         <div class="project-meta">
+           <span>📋 角色：独立完成</span>
+           <span>🛠 工具：GitHub Pages, Codex AI Agent, Git</span>
+           <span class="status-wip">⏳ 进行中</span>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <section id="contact">
+   <div class="container">
+     <h2>联系我</h2>
+     <div class="contact-content">
+       <p>欢迎通过 GitHub 联系我，一起交流产品、项目和合作机会</p>
+       <a href="https://github.com/mengqiniu5-alt" class="btn" target="_blank">GitHub 主页</a>
+     </div>
+   </div>
+ </section>
+ 
+ <footer>
+   <div class="container">
+     <p>&copy; 2026 牛萌琪 · 基于 GitHub Pages 构建</p>
+   </div>
+ </footer>
+ 
+ </body>
+ </html>
